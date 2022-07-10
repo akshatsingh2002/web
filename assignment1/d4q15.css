@@ -1,0 +1,10 @@
+.container{
+    height:200px;
+    width:350px;
+    transition-duration:5s;
+    background-color:green;
+    -webkit-transition:height 0.5s;
+}
+.container:hover{
+    height:250px;
+}
