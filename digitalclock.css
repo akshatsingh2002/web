@@ -1,24 +1,31 @@
 .clock{
-    background-image:url('https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000');
+    background-image:url('https://img.freepik.com/free-photo/red-black-brush-stroke-banner-background-perfect-canva_1361-3597.jpg?w=2000');
+    background-position:-450px;
+    /* background:no-repeat; */
     font-size:48;
     width:50%;
     padding:40px;
     text-align: center;
-    margin-left:25%;
+    margin-left:25%;    
     margin-top:50px;
     font-size:90px;
     border-radius: 10px;
     font-family:cursive;
+    color:white;
 }
 #calander{
     font-size:35px;
     text-align:right;
-    color:white;
+    color:black;
     font-family:sans-serif;
 }
-#bg{
-    margin:left;
-align-items: center;
-width:400px;
-height:300px;
+#background{
+border:solid black 1px;
+border-radius: 5px;
+background-size:500px;
+width:500px;
+height:500px;
+margin-left:480px;
+margin-top:30px;
+image-resolution:100%;
 }
