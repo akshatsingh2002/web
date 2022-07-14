@@ -7,3 +7,6 @@ function solve(){
     let y=eval(n);
     document.getElementById("text").value=y;
 }
+function clear(){
+    document.getElementById("text").value=""
+}
