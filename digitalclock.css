@@ -1,0 +1,24 @@
+.clock{
+    background-image:url('https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000');
+    font-size:48;
+    width:50%;
+    padding:40px;
+    text-align: center;
+    margin-left:25%;
+    margin-top:50px;
+    font-size:90px;
+    border-radius: 10px;
+    font-family:cursive;
+}
+#calander{
+    font-size:35px;
+    text-align:right;
+    color:white;
+    font-family:sans-serif;
+}
+#bg{
+    margin:left;
+align-items: center;
+width:400px;
+height:300px;
+}
