@@ -7,6 +7,15 @@ function solve(){
     let y=eval(n);
     document.getElementById("text").value=y;
 }
-function clear(){
-    document.getElementById("text").value=""
+
+
+function clear1(){
+    let empty = " "
+    document.getElementById("text").value=" "
+}
+function clear2(){
+    n=document.getElementById("text").value
+    l = n.length
+    n = n.substring(0,l-1)
+    document.getElementById("text").value=n
 }
