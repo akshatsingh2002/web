@@ -2,3 +2,15 @@
     margin-left: 200px;
 
 }
+input {
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 160px;
+    color: #CCC;
+}
+  table1.button{
+    border:none;
+    padding-left:20px;
+    padding-right:20px;
+}
