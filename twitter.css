@@ -1,0 +1,14 @@
+/* ReffradId: IIPRSS1828
+CollegeName:Jecrc
+Subject:PhthonDjango */
+.addScroll{
+    overflow-y:auto;
+    height:100%;
+    scrollbar-width:none;
+  }
+  .others{
+    background-color:dimgray;
+    border:none;
+    border-radius:10px;
+    width:400px;
+  }

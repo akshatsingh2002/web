@@ -7,8 +7,13 @@ function count(){
     console.log(j_string)
     console.log(val)
     console.log(n)
-    arr= n.match(val)
-    arr2 = n.match(j_string)
-    document.getElementById("final_cout").innerHTML=arr.length + arr2.length
-   
+    count2 = 0
+    l=val.length
+    for(i=0;i<n.length;i++){
+        if(n.substring(i,i+l)==val ||n.substring(i,i+l)==j_string)
+        count2++
+    }
+    console.log(count2)
+    document.getElementById("final_cout").value=count2
+    
 }
