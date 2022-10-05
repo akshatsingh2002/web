@@ -7,17 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <textarea placeholder="text area "></textarea>
+    <textarea placeholder="text area"></textarea>
+    <textarea placeholder="text area"></textarea>
+    <select id="select">
+        <option value="---" >----</option>
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiplication</option>
+        <option value="/">Division</option>
+        <option value="%">Remainder</option>
+      </select>
     <p>
     </p>
-    
-</body>
-<script>
-    let count = 100;
-    document.querySelector("textarea").onkeyup = function () {
-        
-        count -- ;
-        document.querySelector("p").innerHTML = count;
+    <!-- <script src="assignment1.js"></script> -->
+    <script>
+    document.querySelector("select").onchange = function (){
+        let x = document.querySelector("select").value
+        let var1 = document.querySelectorAll("textarea")[0].value
+        let var2 = document.querySelectorAll("textarea")[1].value
+        let final = var1 + x + var2
+        console.log(eval(final))
+        document.querySelector("p").innerHTML = eval(final)
     }
-</script>
+    </script>
+</body>
 </html>
