@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events2</title>
+</head>
+<body>
+    <input type="text" placeholder="number1">
+    <input type="text" placeholder="number2">
+    <select id="select">
+        <option value="---" >----</option>
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiplication</option>
+        <option value="/">Division</option>
+        <option value="%">Remainder</option>
+      </select>
+</body>
+<script>
+    document.querySelector("select").onchange = function (){
+        let x = document.querySelector("select").value
+        let var1 = document.querySelectorAll("input")[0].value
+        let var2 = document.querySelectorAll("input")[1].value
+        let final = var1 + x + var2
+        console.log(eval(final))
+        //document.querySelector("p").innerHTML = eval(final)
+    }
+
+</script>
+</html>
