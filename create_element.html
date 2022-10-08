@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <input type="text" placeholder="name"><br>
+            <input type="text" placeholder="age"><br>
+            <input type="text" placeholder="company"><br>
+            <input type="text" placeholder="qualification">
+            <button>+</button>
+        </div>
+        <button>Submit</button>
+    </div>
+    
+</body>
+<script>
+    document.querySelector("div button").onclick = function(){
+        var input1 = document.querySelectorAll("input")[0].value
+        console.log(input1)
+        var input = document.createElement("input");
+        input.setAttribute('type', 'text');
+        input.innerHTML = input1
+        input.setAttribute('placeholder','qualification');
+        
+        document.body.appendChild(input);
+        
+
+
+    }
+    //insetAdjacentElement , insertBefore, insertAdjacentHTML
+    //setAttribute children
+</script>
+</html>

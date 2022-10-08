@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push</title>
+</head>
+<body>
+    <input type="text" placeholder="enter text">
+    <button>add element </button>
+    <button>print</button>
+    
+</body>
+<script>
+    let arr = ['akshat','aman']
+    document.querySelectorAll("button")[1].onclick = function(){
+        arr.reverse()
+
+        let para = document.createElement("p")
+        para.innerHTML = arr
+        document.body.appendChild(para)
+    }
+    document.querySelectorAll("button")[0].onclick = function(){
+        let var1 = document.querySelector("input").value
+        arr.push(var1)
+    }
+</script>
+</html>

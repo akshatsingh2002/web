@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement2</title>
+</head>
+<body>
+    <input type="text" placeholder="type heree">
+    <div class="wrapper">
+        <select name="select" id="select">
+            <option value="#">How many times</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+    </div>
+ <!-- setTimeout, setInterval    -->
+</body>
+<script>
+    document.querySelector("select").onchange = function (){
+        let a = document.querySelector("select").value
+        let val = document.querySelector("input").value
+        let div = document.querySelector(".wrapper")
+        
+        for(let i=0;i<a;i++){
+            let var1 = document.createElement("p")
+            var1.innerHTML = val
+            div.appendChild(var1)
+
+
+        }
+    }
+</script>
+</html>

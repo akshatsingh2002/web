@@ -8,15 +8,21 @@
 </head>
 <body>
     <div>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <a href="">Html</a>
+        <a href="">Css</a>
+        <a href="">Js</a>
+        <a href="">Python</a>
+        <a href="">Django</a>
     </div>
     
 </body>
     <script>
-
+        let allAnchors = document.querySelectorAll("a")
+        allAnchors.forEach(function(anchor){
+            anchor.onclick = function(e){
+                e.preventDefault()
+                console.log(anchor.innerHTML)
+            }
+        })
     </script>
 </html>

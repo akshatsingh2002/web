@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        .wrapper{
+            display: inline-block;
+            margin-top: 10%;
+            margin-left: 45%;
+            background-color: white;
+            padding:20px;
+            border:solid grey 1px;
+            border-radius:10px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        button{
+            color: white;
+            border:solid black 1px;
+            background-color:#56953e;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <input type="text" placeholder="Name"><br>
+            <input type="text" placeholder="Age"><br>
+            <input type="text" placeholder="organization"><br>
+            <input type="text" placeholder="Qualification"><br>
+        </div>
+        <button>
+            + Add Qualification
+        </button>
+    </div>
+    
+</body>
+<script>
+    document.querySelector("button").onclick = function(){
+        let inputs = document.createElement("input")
+        inputs.setAttribute('placeholder','qualification')
+        div = document.querySelector(".wrapper div")
+        let lineBreak = document.createElement('br');
+        div.appendChild(inputs)
+        div.appendChild(lineBreak);
+    }
+</script>
+</html>
