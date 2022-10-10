@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion</title>
+  <link rel="stylesheet" href="accordion.css">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          body{
+            background: #369;
+            color: #fff;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          }
+          #accordion{
+            margin: 3rem auto;
+            width: 80%;
+          }
+          .accord{
+            margin: 1rem 0;
+          }
+          .accord h1{
+            border: 1px solid #fff;
+            border-radius: 0.5rem;
+            padding: 0.25rem;
+            transition: all 0.25s ease-out;
+            cursor: pointer;
+          }
+          .accord h1:hover{
+            box-shadow: 4px 3px 3px 3px rgba(0,0,0,0.3);
+          }
+          .accord p{
+            padding: 0.25rem;
+            display: none;
+            border: 1px solid #fff;
+            border-top: none;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+          }
+          .accord p.active{
+            display: block;
+          }
+    </style>
+  <div id="wrapper">
+    <div id="accordion">
+      <div class="accord">
+        <h1>Accordion 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint impedit possimus quod temporibus laborum non consectetur maxime facere repellat blanditiis libero recusandae tempore, eveniet expedita culpa voluptates commodi debitis totam.Dignissimos ipsum vel placeat? Distinctio, minima, beatae quibusdam perferendis voluptatibus fuga tempore tempora consectetur voluptates asperiores quam eveniet iusto, qui optio praesentium sed aperiam tenetur aspernatur. Eveniet possimus nihil voluptas.</p>
+      </div>
+      <div class="accord">
+        <h1>Accordion 2</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit ducimus blanditiis fuga, ea fugiat dolorem voluptatibus aspernatur cupiditate laboriosam sint. Quam necessitatibus officiis fuga aliquid vitae totam nam quos cum.Enim incidunt repellendus similique perferendis adipisci debitis dolorem, veritatis ea impedit doloribus ducimus quibusdam nihil facilis officiis maxime temporibus eaque pariatur ex quam, quas molestiae quasi! Facere laboriosam libero neque.</p>
+      </div>
+      <div class="accord">
+        <h1>Accordion 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste accusamus eligendi odit doloribus, quis ipsam cum! Ad aut quod blanditiis reprehenderit rem odio facilis ab quo, laborum, quos delectus?Voluptates libero fugit quibusdam, molestiae nihil perspiciatis consectetur iusto, inventore pariatur esse praesentium ipsa, quo qui commodi modi ad temporibus voluptate! Est eum quaerat quo. Pariatur inventore quam voluptatibus cumque?</p>
+      </div>
+      <div class="accord">
+        <h1>Accordion 4</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ipsum iure qui harum sunt dolorem omnis, magnam inventore modi, nihil tempore repellendus officia aliquam corrupti ab? Architecto aut corrupti vitae.Laudantium illo vel minima explicabo repellendus nemo, ut sit esse deleniti quos doloremque necessitatibus veritatis delectus optio iusto veniam recusandae sapiente facilis nobis. Maxime eos nobis placeat animi quod tempore.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+   let allh1 = document.querySelectorAll("h1")
+   allh1.forEach(function(h1){
+    let count = 0 
+    h1.onclick = function(){
+        if(count==0){
+        h1.nextElementSibling.style.display = "block"
+        count ++
+        }
+        else {
+        h1.nextElementSibling.style.display = "none"
+        count--
+        }
+    }
+   })
+</script>
+</html> 

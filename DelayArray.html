@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelayArray</title>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="text" placeholder="typer here">
+        <button>Insert in the array </button>
+        <button>Print array</button>
+    </div>
+    
+</body>
+    <script>
+       let  arr = ['aman','akshat','gaurav','jatin','something']
+       let count = Number(0)
+       let para = document.createElement("p")
+       let input1 = document.createElement("input")
+        document.querySelectorAll("button")[0].onclick = function(){
+            let var1 = document.querySelector("input").value
+            arr.push(var1)
+            input1.value = ''
+            input1.focus()
+        }
+        document.querySelectorAll("button")[1].onclick = function(){
+            document.body.appendChild(para)
+            
+            
+         let interval  =  setInterval(function(){
+            if(count == arr.length- 1 ){
+                clearInterval(interval)
+                para.innerHTML = para.innerHTML + arr[count]
+
+            }
+            else
+
+                para.innerHTML = para.innerHTML + arr[count] +","
+                
+                count++
+            },1000)
+        }
+    </script>
+</html>
