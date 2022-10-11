@@ -20,6 +20,9 @@
         span{
             float:right;
         }
+        a{
+            display:none;
+        }
     </style>
     <div class="wrapper">
         <div class="box">
@@ -31,6 +34,7 @@
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ipsum iure qui harum sunt dolorem omnis, magnam inventore modi, nihil tempore repellendus officia aliquam corrupti ab? Architecto aut corrupti vitae.Laudantium illo vel minima explicabo repellendus nemo, ut sit esse deleniti quos doloremque necessitatibus veritatis delectus optio iusto veniam recusandae sapiente facilis nobis. Maxime eos nobis placeat animi quod tempore.
             </p>
+            <a>show</a>
         </div>
         <div class="box">
             <h1>
@@ -39,14 +43,16 @@
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ipsum iure qui harum sunt dolorem omnis, magnam inventore modi, nihil tempore repellendus officia aliquam corrupti ab? Architecto aut corrupti vitae.Laudantium illo vel minima explicabo repellendus nemo, ut sit esse deleniti quos doloremque necessitatibus veritatis delectus optio iusto veniam recusandae sapiente facilis nobis. Maxime eos nobis placeat animi quod tempore.
             </p>
+            <a>show</a>
         </div>
         <div class="box">
             <h1>
-                This is the heading<span>&times;</span>
+                This is the heading<<span>&times;</span>
             </h1>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ipsum iure qui harum sunt dolorem omnis, magnam inventore modi, nihil tempore repellendus officia aliquam corrupti ab? Architecto aut corrupti vitae.Laudantium illo vel minima explicabo repellendus nemo, ut sit esse deleniti quos doloremque necessitatibus veritatis delectus optio iusto veniam recusandae sapiente facilis nobis. Maxime eos nobis placeat animi quod tempore.
             </p>
+            <a>show</a>
         </div>
         <div class="box">
             <h1>
@@ -59,5 +65,27 @@
 
     </div>
 </body>
+    <script>
+        let allh1 = document.querySelectorAll("h1")
+        
+        allh1.forEach(function(h){
+            let counter = 0
+            h.onclick = function(){
+                console.log("onlick worked")
+                if(counter == 0){
+                    h.nextElementSibling.style.display = "none"
+                    h.nextElementSibling.nextElementSibling.style.display = "block"
+                    counter ++
+                }
+                else{
+                    h.nextElementSibling.style.display = "block"
+                    h.nextElementSibling.nextElementSibling.style.display = "none"
+                    counter --
+                }
+            }
+
+        })
+
+    </script>
 </html>
 <!-- hasown(),hasownProperty(),Objecct.keys -->
