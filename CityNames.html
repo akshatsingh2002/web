@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityNames</title>
+</head>
+<body>
+    <button>
+        Click Here
+    </button>
+    
+</body>
+    <script>
+        let input = ["Jaipur","jodhpur","Udaipur","Kanpur","Kashmir","Laddak","luckhnow"]
+        let object = {
+
+        }
+        document.querySelector("button").onclick = function() {
+            for(let i = 0;i<input.length-1;i++){
+                let var1 = ((input[i]).substr(0,1)).toLowerCase()
+                console.log(var1)
+                if(object.hasOwnProperty(var1)){
+                    object[var1].push(input[i])
+    
+                }
+                else
+                object[var1] =[input[i]]
+            }
+            console.log(object)
+    }
+    </script>
+</html>
