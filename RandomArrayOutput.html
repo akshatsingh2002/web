@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="text">
+        <button>Add to array</button>
+        <button>Print random name</button>
+    </div>
+    
+</body>
+    <script>
+        let arr = ['akshat','aman','gaurav','mohit','arpit','sethji','dixhit','gaurav2','hello','world']
+        let num = []
+        document.querySelectorAll("button")[0].onclick = function(){
+            let var1 = document.querySelector("input").value
+            arr.push(var1)
+        }
+         document.querySelectorAll("button")[1].onclick = function(){
+            let para = document.createElement("p")
+            document.body.appendChild(para)
+            let var2 = Math.floor(Math.random()*arr.length)
+            console.log(var2)
+            if(num.includes(var2)){
+                console.log(undefined)
+            }
+            else{
+                num.push(var2)
+                para.innerHTML = arr[var2]
+            }
+            console.log(num)
+            
+
+
+            
+        }
+    </script>
+</html>

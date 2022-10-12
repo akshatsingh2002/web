@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array3</title>
+</head>
+<body>
+    <input type="text" placeholder="">
+    <button>
+        click here
+    </button>
+    
+</body>
+    <script>
+        let input = [1,[2,3],[4,5,6],[7,8,9]]
+        let input2 = []
+        document.querySelector("button").onclick = function() {
+        for(i=0;i<input.length;i++){
+            if(typeof(input[i])==="object"){
+                console.log("array found")
+                input2.push(...input[i])
+
+            }
+            else
+            input2.push(input[i])
+            
+        }
+        console.log(input2)
+    }
+    </script>
+</html>
